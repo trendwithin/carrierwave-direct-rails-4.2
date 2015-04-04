@@ -23,5 +23,9 @@
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
+<%= direct_upload_form_for @uploader do |f| %>
+  <p>
+    <%= f.file_field :avatar %> </p>
+  <p>
+    <%= f.submit "Upload Avatar" %></p>
+<% end %>
