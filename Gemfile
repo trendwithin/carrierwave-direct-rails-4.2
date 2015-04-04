@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'rmagick'
 gem 'carrierwave'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'eefgilm'
