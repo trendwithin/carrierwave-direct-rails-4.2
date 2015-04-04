@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<p>
+  <strong>
+    Avatar
+  </strong>
+  <%= image_tag @user.avatar_url.to_s %>
+</p>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
