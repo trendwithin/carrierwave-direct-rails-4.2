@@ -10,13 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.hidden_field :key %>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
-  <div class="div">
-    <%= f.file_field :avatar %>
   </div>
   <div class="actions">
     <%= f.submit %>
