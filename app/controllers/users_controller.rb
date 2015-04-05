@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @uploader = User.new.avatar
+    @uploader.success_action_redirect = new_user_url
   end
 
   # GET /users/1
@@ -14,7 +16,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = User.new(key: params[:key])
   end
 
   # GET /users/1/edit
