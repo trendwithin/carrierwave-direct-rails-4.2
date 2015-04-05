@@ -3,7 +3,11 @@
   <strong>
     Avatar
   </strong>
-  <%= image_tag @user.avatar_url(:thumb).to_s %>
+  <%= if @user.image_processed? %>
+    <%= image_tag @user.avatar_url(:thumb).to_s %>
+  <% else %>
+    <em>Processing...</em>
+  <% end %>
 </p>
 <p>
   <strong>Name:</strong>

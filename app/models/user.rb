@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
     include Sidekiq::Worker
 
     def perform(id, key)
-      avatar = User.find(id)
+      user = User.find(id)
       user.key = key
       user.remote_avatar_url = user.avatar.direct_fog_url(with_path: true)
       user.save!
